@@ -25,32 +25,24 @@ namespace PracticeOkak
 
         private void buttonEnter_Click(object sender, EventArgs e)
         {
-            labelERRLogin.Visible = false;
-            labelERRPassword.Visible = false;
+            
+            labelEmailERR.Visible = false;
+            labelLoginERR.Visible = false;
 
             string userLogin = textBoxLogin.Text; // text from TB
-            string userPassword = textBoxPassword.Text;
+            string userEmail = textBoxEmail.Text;
+            string userPassword = textBoxPass1.Text;
+            string userConfPass = textBoxPass2.Text;
 
-            string validLogin = "On";
-            string validPassword = "yak";
 
-            if (userLogin == validLogin)
+            if (userPassword == userConfPass)
             {
-                if (userPassword == validPassword)
-                {
-                    MessageBox.Show("Password ok", "On yak", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    labelERRPassword.Text = "Invalid password (ti degenerator)";
-                    labelERRPassword.Visible = true;
-                }
+                Account account = new Account(userLogin, userEmail, userPassword);
             }
-            else
-            {
-                labelERRLogin.Text = "Invalid login (tut nemae komentarya)";
-                labelERRLogin.Visible = true;
-            }
+
+
+
+
 
         }
     }
