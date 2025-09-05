@@ -7,7 +7,7 @@ using System.Windows.Forms.VisualStyles;
 
 namespace PracticeOkak
 {
-    class Account
+    public class Account
     {
         // properties
         // fields

@@ -44,9 +44,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelLoginERR
@@ -77,7 +75,6 @@
             this.textBoxLogin.Location = new System.Drawing.Point(126, 145);
             this.textBoxLogin.Multiline = true;
             this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.PasswordChar = '*';
             this.textBoxLogin.Size = new System.Drawing.Size(221, 35);
             this.textBoxLogin.TabIndex = 9;
             // 
@@ -214,26 +211,18 @@
             this.panel1.Controls.Add(this.labelConfpassERR);
             this.panel1.Controls.Add(this.labelLoginERR);
             this.panel1.Controls.Add(this.labelPasswordERR);
-            this.panel1.Location = new System.Drawing.Point(145, 12);
+            this.panel1.Location = new System.Drawing.Point(131, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(468, 411);
             this.panel1.TabIndex = 20;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(637, 227);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 21;
-            this.pictureBox1.TabStop = false;
             // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.ClientSize = new System.Drawing.Size(774, 457);
-            this.Controls.Add(this.pictureBox1);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(720, 482);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -243,7 +232,6 @@
             this.Load += new System.EventHandler(this.RegistrationForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -265,6 +253,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

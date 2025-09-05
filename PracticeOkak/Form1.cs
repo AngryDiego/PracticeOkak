@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -30,12 +31,16 @@ namespace PracticeOkak
             string userLogin = textBoxLogin.Text; // text from TB
             string userPassword = textBoxPassword.Text;
 
-            string validLogin = "On";
-            string validPassword = "yak";
+            var userUsername = AccountDB.Accounts.FirstOrDefault(acc => acc.Username == userLogin); // != null
 
-            if (userLogin == validLogin )
+            // acc1, acc2, acc3, acc4....
+            // acc = Account object
+
+            if (userUsername != null)
+                
             {
-                if (userPassword == validPassword)
+               
+                if (userPassword == userUsername.Password)
                 {
                     MessageBox.Show("Password ok", "On yak", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -52,6 +57,13 @@ namespace PracticeOkak
             }
 
             //назва_обʼєкту.властивості.метод/івент(*параметр)
+        }
+
+        private void linkLabelToReg_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            RegistrationForm RegForm = new RegistrationForm();
+            RegForm.Show();
+            this.Hide();
         }
     }
 }

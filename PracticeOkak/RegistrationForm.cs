@@ -35,9 +35,18 @@ namespace PracticeOkak
             string userConfPass = textBoxPass2.Text;
 
 
-            if (userPassword == userConfPass)
+            if (userPassword == userConfPass && userPassword != "")
             {
                 Account account = new Account(userLogin, userEmail, userPassword);
+
+                if(AccountDB.IsValidEmail(account) && AccountDB.IsValidPassword(account))
+                {
+                AccountDB.Accounts.Add(account);
+                Form1 form1 = new Form1();
+                form1.Show();
+                this.Hide();
+                }
+               
             }
 
 

@@ -7,23 +7,16 @@ using System.Runtime.Remoting.Lifetime;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PracticeOkak
 {
-    class AccountDB
+    public  class AccountDB
     {
         // List == vector
-        List<Account> Accounts { get; set; }
+        public static List<Account> Accounts = new List<Account>();
 
-        public void AddAccount(Account account)
-        {
-            if(IsValidEmail(account) && IsValidPassword(account))
-            {
-                Accounts.Add(account);
-            }
-        }
-
-        public bool IsValidEmail(Account account)
+         public static bool IsValidEmail(Account account)
         {
             string mailcheck = account.Mail;
             int at = 0;
@@ -58,7 +51,7 @@ namespace PracticeOkak
 
 
 
-        public bool IsValidPassword (Account account)
+        public static bool IsValidPassword (Account account)
         {
             string passcheck = account.Password;
 
